@@ -5,4 +5,5 @@
 `choco install neovim`
 `choco install ripgrep`
 `choco install mingw`
-3. Run `:PackerSync`
+`choco install nerd-fonts-hack`
+3. Run `:PackerInstall`
