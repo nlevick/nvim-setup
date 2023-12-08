@@ -1,3 +1,5 @@
-vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
-vim.keymap.set("n", "gf", "<cmd>diffget //2<CR>")
-vim.keymap.set("n", "gj", "<cmd>diffget //3<CR>")
+vim.keymap.set("n", "<leader>gs", function()
+    vim.cmd(":vertical Git")
+end)
+-- vim.keymap.set("n", "gf", "<cmd>diffget //2<CR>")
+-- vim.keymap.set("n", "gj", "<cmd>diffget //3<CR>")
