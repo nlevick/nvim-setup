@@ -64,6 +64,7 @@ return require('packer').startup(function(use)
       'nvim-lualine/lualine.nvim',
       requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
+  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 
   use 'norcalli/nvim-colorizer.lua'
 
@@ -73,6 +74,7 @@ return require('packer').startup(function(use)
       config = function() require("nvim-autopairs").setup {} end
   }
   use 'lewis6991/gitsigns.nvim'
+  use 'nvim-tree/nvim-tree.lua'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

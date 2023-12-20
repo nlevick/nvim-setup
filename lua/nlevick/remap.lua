@@ -3,8 +3,7 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 
-vim.keymap.set("n", "oo", "o<Esc>")
-vim.keymap.set("n", "OO", "O<Esc>")
+vim.keymap.set("n", "<C-o>", "o<Esc>")
 vim.keymap.set("i", "jj", "<Esc>")
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -15,6 +14,9 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+
+-- third party globals
+vim.api.nvim_set_keymap("n", "<leader>t", ":NvimTreeToggle<cr>", {silent = true, noremap = true})
 
 --[[ vim.keymap.set("n", "<leader>vwm", function()
     require("vim-with-me").StartVimWithMe()
