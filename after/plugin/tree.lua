@@ -10,7 +10,6 @@ local function my_on_attach(bufnr)
 
   -- custom mappings
   vim.keymap.set('n', '<C-x>',   api.node.open.vertical,              opts('Open: Vertical Split'))
-  vim.keymap.set("n", "<CR>", api.node.open.tab_drop, opts("Tab drop"))
 end
 
 -- pass to setup along with your other options
