@@ -2,7 +2,7 @@ local telescope = require('telescope')
 
 -- Configure key mappings
 telescope.setup {
-    file_ignore_patterns = { "*.js.html", "*.jsx.html", "*.ts.html", "*.tsx.html" },
+    file_ignore_patterns = { "*.html", "**/*.js.html", "**/*.jsx.html", "**/*.ts.html", "**/*.tsx.html" },
     defaults = {
         mappings = {
             i = {

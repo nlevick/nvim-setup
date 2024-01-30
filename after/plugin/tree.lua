@@ -1,4 +1,4 @@
-vim.api.nvim_set_keymap("n", "<leader>t", ":NvimTreeToggle<cr>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>y", ":NvimTreeToggle<cr>", { silent = true, noremap = true })
 vim.api.nvim_set_keymap("n", "<C-f>", ":NvimTreeFindFile<cr>", { silent = true, noremap = true })
 
 local function my_on_attach(bufnr)
