@@ -47,8 +47,9 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
--- vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
-vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
+-- vim.keymap.set("n", "<leader>bo", [[:up|%bd|e#|bd#<CR>]]);
+vim.keymap.set("n", "<leader>bo", [[:%bd|e#<CR>]]);
+vim.keymap.set("n", "<leader>bq", [[:bp|bw#<CR>]]);
 
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
