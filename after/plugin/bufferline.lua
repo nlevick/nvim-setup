@@ -7,6 +7,11 @@ bufferline.setup({
         -- always_show_bufferline = true,
         -- show_buffer_close_icons = true,
         -- show_close_icon = true,
+        diagnostics = "nvim_lsp",
+        diagnostics_indicator = function(count, level)
+            local icon = level:match("error") and " " or " "
+            return " " .. icon .. count
+        end,
         color_icons = true,
         numbers = "ordinal",
         indicator = {
@@ -38,3 +43,5 @@ bufferline.setup({
 
 vim.keymap.set('n', '<leader><Tab>', '<Cmd>BufferLineCycleNext<CR>', {})
 vim.keymap.set('n', '<leader><S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', {})
+vim.keymap.set('n', '<leader><Left>', '<Cmd>BufferLineMoveNext<CR>', {})
+vim.keymap.set('n', '<leader><Right>', '<Cmd>BufferLineMovePrev<CR>', {})
