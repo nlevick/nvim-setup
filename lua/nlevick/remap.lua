@@ -35,6 +35,8 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 -- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 vim.keymap.set("n", "<leader>a", "ggVG")
+vim.keymap.set("n", "<leader>b", [[:ls<CR>:b<SPACE>]])
+vim.keymap.set("n", "<leader>B", [[:b#<CR>]])
 vim.keymap.set("n", "<C-n>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-b>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
