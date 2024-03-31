@@ -6,4 +6,6 @@
 `choco install ripgrep`
 `choco install mingw`
 `choco install nerd-fonts-hack`
-3. Run `:PackerInstall`
+`choco install gcc`
+4. Run `:PackerInstall`
+5. Run `:MasonInstall`
