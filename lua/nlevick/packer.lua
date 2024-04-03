@@ -16,8 +16,6 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
-    use 'ThePrimeagen/vim-be-good'
-
     use({
         'talha-akram/noctis.nvim',
         as = 'noctis',
@@ -26,12 +24,12 @@ return require('packer').startup(function(use)
         end
     })
 
-    use ({
-    	  'tanvirtin/monokai.nvim',
-      as = 'monokai',
-    	  config = function()
-    		  vim.cmd('colorscheme monokai_pro')
-    	  end
+    use({
+        'tanvirtin/monokai.nvim',
+        as = 'monokai',
+        config = function()
+            vim.cmd('colorscheme monokai_pro')
+        end
     })
 
     use {
@@ -58,8 +56,16 @@ return require('packer').startup(function(use)
             -- Autocompletion
             { 'hrsh7th/nvim-cmp' },
             { 'hrsh7th/cmp-nvim-lsp' },
-            { 'L3MON4D3/LuaSnip' },
         }
+    }
+
+    use {
+        'L3MON4D3/LuaSnip',
+        requires = {
+            'saadparwaiz1/cmp_luasnip',
+            'rafamadriz/friendly-snippets',
+            'onsails/lspkind-nvim'
+        },
     }
 
     use('jose-elias-alvarez/null-ls.nvim')
