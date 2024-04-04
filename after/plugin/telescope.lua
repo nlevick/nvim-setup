@@ -6,6 +6,12 @@ telescope.setup {
         mappings = {
             i = {
                 ["<C-x>"] = "select_vertical",
+                ["<C-o>"] = function(prompt_bufnr)
+                    require("telescope.actions").select_tab(prompt_bufnr)
+                    require("telescope.builtin").resume()
+                end,
+                ["<C-j>"] = "move_selection_next",
+                ["<C-k>"] = "move_selection_previous",
             },
         },
     },
