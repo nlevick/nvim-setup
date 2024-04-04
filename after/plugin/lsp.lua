@@ -17,7 +17,7 @@ lsp_zero.on_attach(function(client, bufnr)
         local new_path = vim.api.nvim_buf_get_name(0)
         if not (org_path == new_path) then
             -- Create a new tab for the original file
-            vim.api.nvim_command('0tabnew %')
+            vim.api.nvim_command('-1tabnew %')
 
             -- Restore the cursor position
             vim.api.nvim_command('b ' .. org_path)
