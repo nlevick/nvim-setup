@@ -7,5 +7,14 @@
 `choco install mingw`
 `choco install nerd-fonts-hack`
 `choco install gcc`
-4. Run `:PackerInstall`
-5. Run `:MasonInstall`
+
+### Setup packages
+1. Run `:PackerInstall`
+## For TS dev 
+2. `:MasonInstall`
+* eslint-lsp
+* ts-standard
+* prettierd
+* prettier
+* typescript-language-server
+3. Install prettier globally
