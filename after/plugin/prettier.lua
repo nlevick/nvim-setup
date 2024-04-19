@@ -16,4 +16,15 @@ prettier.setup({
     "typescriptreact",
     "yaml",
   },
+  cli_options = {
+    arrow_parens = "always",
+    bracket_spacing = true,
+    html_whitespace_sensitivity = "css",
+    print_width = 80,
+    semi = true,
+    single_quote = false,
+    tab_width = 2,
+    trailing_comma = "es5",
+    use_tabs = false,
+  },
 })
