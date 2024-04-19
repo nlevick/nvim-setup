@@ -35,7 +35,12 @@ return require('packer').startup(function(use)
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.4',
         -- or                            , branch = '0.1.x',
-        requires = { { 'nvim-lua/plenary.nvim' } }
+        requires = {
+            { "nvim-telescope/telescope-live-grep-args.nvim" },
+            { 'nvim-lua/plenary.nvim' } },
+        config = function()
+            require("telescope").load_extension("live_grep_args")
+        end
     }
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
@@ -73,11 +78,11 @@ return require('packer').startup(function(use)
 
     use "terrortylor/nvim-comment"
 
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-    }
-    use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
+    use 'nvim-tree/nvim-web-devicons'
+
+    use 'nvim-lualine/lualine.nvim'
+
+    use { 'akinsho/bufferline.nvim', tag = "*" }
 
     use 'norcalli/nvim-colorizer.lua'
 
