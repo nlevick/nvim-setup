@@ -1,5 +1,5 @@
 vim.api.nvim_set_keymap("n", "<leader>y", ":NvimTreeToggle<cr>", { silent = true, noremap = true })
-vim.api.nvim_set_keymap("n", "<C-f>", ":NvimTreeFindFile<cr>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<C-y>", ":NvimTreeFindFile<cr>", { silent = true, noremap = true })
 
 local function my_on_attach(bufnr)
     local api = require "nvim-tree.api"
@@ -17,7 +17,8 @@ end
 
 -- pass to setup along with your other options
 require("nvim-tree").setup {
-    ---
     on_attach = my_on_attach,
-    ---
+    view = {
+        width = 45,
+    },
 }

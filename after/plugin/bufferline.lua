@@ -15,7 +15,7 @@ bufferline.setup({
         color_icons = true,
         numbers = "ordinal",
         indicator = {
-            style = 'underline'
+            -- style = 'underline'
         },
         style_preset = bufferline.style_preset.no_italic
     },
