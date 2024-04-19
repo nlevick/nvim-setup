@@ -1,5 +1,5 @@
-vim.keymap.set("n", "<leader>gs", function()
+vim.keymap.set("n", "<leader>gg", function()
     vim.cmd(":tab Git")
 end)
--- vim.keymap.set("n", "gf", "<cmd>diffget //2<CR>")
--- vim.keymap.set("n", "gj", "<cmd>diffget //3<CR>")
+vim.keymap.set("n", "gf", "<cmd>diffget //2<CR>")
+vim.keymap.set("n", "gj", "<cmd>diffget //3<CR>")
