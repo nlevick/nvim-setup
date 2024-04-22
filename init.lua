@@ -1,1 +1,2 @@
-require("nlevick")
+require("nlevick.core")
+require("nlevick.lazy")
