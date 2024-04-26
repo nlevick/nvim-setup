@@ -66,6 +66,7 @@ return {
 					{ "filetype" },
 				},
 			},
+			extensions = { "fugitive" },
 		})
 	end,
 }

@@ -1,4 +1,13 @@
 return {
+	-- {
+	-- 	"tanvirtin/monokai.nvim",
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		require("monokai").setup({ palette = require("monokai").ristretto })
+	-- 		vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#65D1FF", bold = true })
+	-- 		vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#ff9e64", bold = true })
+	-- 	end,
+	-- },
 	{
 		"folke/tokyonight.nvim",
 		priority = 1000, -- make sure to load this before all the other start plugins
@@ -10,8 +19,8 @@ return {
 			local bg_visual = "#275378"
 			local fg = "#CBE0F0"
 			local fg_dark = "#B4D0E9"
-			local fg_gutter = "#627E97"
 			local border = "#547998"
+			local terminal_black = "#6D76A4"
 
 			require("tokyonight").setup({
 				style = "night",
@@ -29,8 +38,8 @@ return {
 					colors.fg = fg
 					colors.fg_dark = fg_dark
 					colors.fg_float = fg
-					colors.fg_gutter = fg_gutter
 					colors.fg_sidebar = fg_dark
+					colors.terminal_black = terminal_black
 				end,
 			})
 			-- load the colorscheme here
