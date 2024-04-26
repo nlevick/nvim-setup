@@ -10,8 +10,8 @@ return {
 			end
 
 			-- Navigation
-			map("n", "]h", gs.next_hunk, "Next Hunk")
-			map("n", "[h", gs.prev_hunk, "Prev Hunk")
+			map("n", "]c", gs.next_hunk, "Next Hunk")
+			map("n", "[c", gs.prev_hunk, "Prev Hunk")
 
 			-- Actions
 			map("n", "<leader>hs", gs.stage_hunk, "Stage hunk")
@@ -30,10 +30,10 @@ return {
 
 			map("n", "<leader>hp", gs.preview_hunk, "Preview hunk")
 
-			map("n", "<leader>hb", function()
+			map("n", "<leader>hB", function()
 				gs.blame_line({ full = true })
 			end, "Blame line")
-			map("n", "<leader>hB", gs.toggle_current_line_blame, "Toggle line blame")
+			map("n", "<leader>hb", gs.toggle_current_line_blame, "Toggle line blame")
 
 			map("n", "<leader>hd", gs.diffthis, "Diff this")
 			map("n", "<leader>hD", function()
