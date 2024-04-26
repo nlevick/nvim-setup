@@ -17,18 +17,16 @@ return {
 	},
 	config = function()
 		local cmp = require("cmp")
-
 		local luasnip = require("luasnip")
-
 		local lspkind = require("lspkind")
-
-		-- js snippets
-		luasnip.filetype_extend("javascript", { "html" })
-		luasnip.filetype_extend("javascriptreact", { "html" })
-		luasnip.filetype_extend("typescriptreact", { "html" })
 
 		-- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
 		require("luasnip.loaders.from_vscode").lazy_load()
+
+		-- luasnip.filetype_extend("typescript", { "html", "javascript" })
+		-- luasnip.filetype_extend("javascriptreact", { "html", "javascript" })
+		-- luasnip.filetype_extend("typescriptreact", { "html", "javascriptreact", "typescript", "javascript" })
+		-- require("luasnip/loaders/from_vscode").lazy_load()
 
 		local has_words_before = function()
 			local line, col = unpack(vim.api.nvim_win_get_cursor(0))
