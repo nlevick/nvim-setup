@@ -37,8 +37,8 @@ return {
 			fold_virt_text_handler = handler,
 		})
 
-		vim.o.foldcolumn = "1" -- '0' is not bad
-		vim.o.foldlevelstart = 99
-		vim.o.foldenable = true
+		vim.o.foldcolumn = "1" -- show 1 width column containing folds
+		vim.o.foldlevelstart = 99 -- all folds open on file open
+		vim.o.foldenable = true -- folding is enabled to start, can be toggled
 	end,
 }
