@@ -44,8 +44,8 @@ return {
 			})
 			-- load the colorscheme here
 			vim.cmd([[colorscheme tokyonight]])
-			vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#65D1FF", bold = true })
-			vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#ff9e64", bold = true })
+			vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#22a4be", bold = true })
+			vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#e06f88", bold = true })
 		end,
 	},
 }
