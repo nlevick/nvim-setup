@@ -107,7 +107,7 @@ return {
 		-- SEARCH
 		keymap.set("n", "<leader>R", builtin.resume, { desc = "Resume last telescope search" })
 		-- git repo: path
-		keymap.set("n", "<C-t>", builtin.git_files, { desc = "Browse git files" })
+		keymap.set("n", "<C-p>", builtin.git_files, { desc = "Browse git files" })
 		-- directory (and children): path
 		keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find files" })
 		-- directory: path and file content
