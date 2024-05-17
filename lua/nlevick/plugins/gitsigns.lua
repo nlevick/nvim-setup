@@ -34,7 +34,7 @@ return {
 				gs.blame_line({ full = true })
 			end, "Blame line")
 			map("n", "<leader>hb", gs.toggle_current_line_blame, "Toggle line blame")
-
+			map("n", "<leader>td", gs.toggle_deleted, "Toggle deleted")
 			map("n", "<leader>hd", gs.diffthis, "Diff this")
 			map("n", "<leader>hD", function()
 				gs.diffthis("~")
