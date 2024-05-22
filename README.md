@@ -28,7 +28,7 @@ choco install neovim
 choco install neovim
 ```
 
-Other neovim needs:
+Other neovim dependency:
 
 ```bash
 choco install mingw
