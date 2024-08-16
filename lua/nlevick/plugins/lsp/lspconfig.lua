@@ -32,6 +32,9 @@ return {
 				opts.desc = "Go to declaration"
 				keymap.set("n", "gD", vim.lsp.buf.definition, opts)
 
+				opts.desc = "Go to declaration in new split"
+				keymap.set("n", "gv", ":vert winc ]<CR>", opts)
+
 				opts.desc = "Show LSP definitions"
 				keymap.set("n", "gd", function()
 					local org_path = vim.api.nvim_buf_get_name(0)
