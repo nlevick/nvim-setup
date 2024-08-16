@@ -91,11 +91,6 @@ return {
 
 				opts.desc = "Restart LSP"
 				keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
-
-				opts.desc = "Toggle signature preview"
-				-- keymap.set({ "n" }, "<leader>k", function()
-				-- 	lsp_signature.toggle_float_win()
-				-- end, { silent = true, noremap = true, desc = "toggle signature" })
 			end,
 		})
 
