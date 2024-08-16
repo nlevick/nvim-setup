@@ -16,8 +16,6 @@ return {
 		-- import cmp-nvim-lsp plugin
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
-		local lsp_signature = require("lsp_signature")
-
 		local keymap = vim.keymap -- for conciseness
 
 		vim.api.nvim_create_autocmd("LspAttach", {
@@ -85,13 +83,16 @@ return {
 				opts.desc = "Show documentation for what is under cursor"
 				keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
 
+				opts.desc = "Show signature for what is under cursor"
+				keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
+
 				opts.desc = "Restart LSP"
 				keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
 
 				opts.desc = "Toggle signature preview"
-				keymap.set({ "n" }, "<leader>k", function()
-					lsp_signature.toggle_float_win()
-				end, { silent = true, noremap = true, desc = "toggle signature" })
+				-- keymap.set({ "n" }, "<leader>k", function()
+				-- 	lsp_signature.toggle_float_win()
+				-- end, { silent = true, noremap = true, desc = "toggle signature" })
 			end,
 		})
 
