@@ -152,6 +152,17 @@ return {
 					},
 				})
 			end,
+			["omnisharp"] = function()
+				lspconfig["omnisharp"].setup({
+					capabilities = capabilities,
+					filetypes = {
+						"cs",
+					},
+					enable_roslyn_analyzers = true,
+					-- organize_imports_on_format = true,
+					enable_import_completion = true,
+				})
+			end,
 			["lua_ls"] = function()
 				-- configure lua server (with special settings)
 				lspconfig["lua_ls"].setup({

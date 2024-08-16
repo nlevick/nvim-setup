@@ -41,7 +41,7 @@ return {
 				"gitignore",
 				"query",
 				"vimdoc",
-				"c",
+				"c_sharp",
 			},
 			incremental_selection = {
 				enable = true,
