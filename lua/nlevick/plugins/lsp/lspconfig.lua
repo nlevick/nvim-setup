@@ -161,6 +161,7 @@ return {
 					enable_import_completion = true,
 				})
 			end,
+			["ts_ls"] = function() end,
 			["lua_ls"] = function()
 				-- configure lua server (with special settings)
 				lspconfig["lua_ls"].setup({
