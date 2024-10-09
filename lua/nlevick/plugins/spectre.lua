@@ -3,7 +3,10 @@ return {
 	dependencies = { "nvim-lua/plenary.nvim" },
 	config = function()
 		local spectre = require("spectre")
-		spectre.setup()
+		spectre.setup({
+			lnum_for_results = true,
+			use_trouble_qf = true,
+		})
 
 		local keymap = vim.keymap
 
