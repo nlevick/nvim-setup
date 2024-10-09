@@ -32,7 +32,7 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 
 -- keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
-keymap.set("n", "<C-o>", "o<Esc>", { desc = "Add line below from normal mode" })
+-- keymap.set("n", "<C-O>", "o<Esc>", { desc = "Add line below from normal mode" })
 
 keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move line up" })
 keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move line down" })
@@ -56,7 +56,10 @@ keymap.set("n", "Q", "<nop>")
 -- keymap.set("n", "<leader>f", vim.lsp.buf.format)
 -- keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
-keymap.set("n", "<leader>a", "ggVG", { desc = "Select all" })
+keymap.set("n", "<leader>z", "ZZ", { desc = "Close buffer" })
+
+keymap.set("n", "<leader>aa", "ggVG", { desc = "Select all" })
+keymap.set("n", "<leader>ap", "V$%", { desc = "Select paragraph" })
 -- keymap.set("n", "<leader>b", [[:ls<CR>:b]])
 keymap.set("n", ",b", [[:b#<CR>]])
 keymap.set("n", "<C-n>", "<cmd>cnext<CR>zz")
