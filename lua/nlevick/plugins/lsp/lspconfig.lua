@@ -30,17 +30,17 @@ return {
 				keymap.set("n", "rr", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
 
 				opts.desc = "Go to declaration"
-				keymap.set("n", "gD", vim.lsp.buf.definition, opts)
+				keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 
 				opts.desc = "Go to declaration in new split"
 				keymap.set("n", "gv", ":vert winc ]<CR>", opts)
 
 				opts.desc = "Show LSP definitions"
-				keymap.set("n", "gd", function()
+				keymap.set("n", "gD", function()
 					local org_path = vim.api.nvim_buf_get_name(0)
 
 					-- Go to definition:
-					vim.api.nvim_command("normal gD")
+					vim.api.nvim_command("normal gd")
 
 					-- Wait LSP server response
 					vim.wait(100, function() end)
