@@ -55,6 +55,7 @@ return {
 							["<C-e>"] = require("telescope-live-grep-args.actions").quote_prompt({
 								postfix = " -Thtml",
 							}),
+							["<C-f>"] = actions.to_fuzzy_refine,
 						},
 					},
 				},
@@ -146,9 +147,10 @@ return {
 		-- SEARCH
 		keymap.set("n", "<leader>R", builtin.resume, { desc = "Resume last telescope search" })
 		-- git repo: path
-		keymap.set("n", "<C-p>", builtin.git_files, { desc = "Browse git files" })
+		keymap.set("n", "<leader>fg", builtin.git_files, { desc = "Browse git files" })
 		-- directory (and children): path
 		keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find files" })
+		keymap.set("n", "<C-p>", builtin.find_files, { desc = "Find files" })
 		-- directory: path and file content
 		keymap.set(
 			"n",
