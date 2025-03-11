@@ -22,6 +22,12 @@ return {
 		)
 		vim.api.nvim_set_keymap(
 			"n",
+			"<leader>oc",
+			[[<CMD>lua require('close_buffers').delete({type = 'this'})<CR>]],
+			{ noremap = true, silent = true, desc = "Delete the current buffer" }
+		)
+		vim.api.nvim_set_keymap(
+			"n",
 			"<leader>oh",
 			[[<CMD>lua require('close_buffers').delete({type = 'hidden'})<CR>]],
 			{ noremap = true, silent = true, desc = "Delete all non-visibile buffers" }
