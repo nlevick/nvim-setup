@@ -6,6 +6,7 @@ local keymap = vim.keymap -- for conciseness
 -- General Keymaps -------------------
 
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode" })
+keymap.set("i", "jj", "<ESC>:w<ENTER>", { desc = "Exit insert mode then save" })
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
