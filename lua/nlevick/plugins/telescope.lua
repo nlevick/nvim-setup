@@ -2,10 +2,10 @@ return {
 	"nvim-telescope/telescope.nvim",
 	branch = "0.1.x",
 	dependencies = {
+		"nvim-tree/nvim-web-devicons",
 		"nvim-lua/plenary.nvim",
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 		{ "nvim-telescope/telescope-live-grep-args.nvim" },
-		"nvim-tree/nvim-web-devicons",
 	},
 	config = function()
 		local telescope = require("telescope")
@@ -119,7 +119,7 @@ return {
 		keymap.set(
 			"n",
 			"<leader>b",
-			[[<Cmd>lua require'telescope.builtin'.buffers({prompt_title = 'Search Buffers', results_title='Open Buffers', winblend = 3, layout_strategy = 'vertical', layout_config = { width = 0.60, height = 0.55 }})<CR>]],
+			[[<Cmd>lua require'telescope.builtin'.buffers({prompt_title = 'Search Buffers', results_title='Open Buffers', layout_strategy = 'horizontal', layout_config = { preview_width = 0.45, width = 0.75 }})<CR>]],
 			{ desc = "Search buffers", noremap = true, silent = true }
 		)
 

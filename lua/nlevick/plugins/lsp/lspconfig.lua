@@ -27,7 +27,12 @@ return {
 
 				-- set keybinds
 				opts.desc = "Show LSP references"
-				keymap.set("n", "rr", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
+				keymap.set(
+					"n",
+					"rr",
+					"<cmd>lua require'telescope.builtin'.lsp_references({fname_width = 120})<CR>",
+					opts
+				) -- show definition, references
 
 				opts.desc = "Go to declaration"
 				keymap.set("n", "gd", vim.lsp.buf.definition, opts)
