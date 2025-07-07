@@ -139,33 +139,33 @@ return {
 					filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
 				})
 			end,
-			["emmet_ls"] = function()
-				-- configure emmet language server
-				lspconfig["emmet_ls"].setup({
-					capabilities = capabilities,
-					filetypes = {
-						"html",
-						"typescriptreact",
-						"javascriptreact",
-						"css",
-						"sass",
-						"scss",
-						"less",
-						"svelte",
-					},
-				})
-			end,
-			["omnisharp"] = function()
-				lspconfig["omnisharp"].setup({
-					capabilities = capabilities,
-					filetypes = {
-						"cs",
-					},
-					enable_roslyn_analyzers = true,
-					-- organize_imports_on_format = true,
-					enable_import_completion = true,
-				})
-			end,
+			-- ["emmet_ls"] = function()
+			-- 	-- configure emmet language server
+			-- 	lspconfig["emmet_ls"].setup({
+			-- 		capabilities = capabilities,
+			-- 		filetypes = {
+			-- 			"html",
+			-- 			"typescriptreact",
+			-- 			"javascriptreact",
+			-- 			"css",
+			-- 			"sass",
+			-- 			"scss",
+			-- 			"less",
+			-- 			"svelte",
+			-- 		},
+			-- 	})
+			-- end,
+			-- ["omnisharp"] = function()
+			-- 	lspconfig["omnisharp"].setup({
+			-- 		capabilities = capabilities,
+			-- 		filetypes = {
+			-- 			"cs",
+			-- 		},
+			-- 		enable_roslyn_analyzers = true,
+			-- 		-- organize_imports_on_format = true,
+			-- 		enable_import_completion = true,
+			-- 	})
+			-- end,
 			["ts_ls"] = function() end,
 			["lua_ls"] = function()
 				-- configure lua server (with special settings)
