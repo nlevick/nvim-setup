@@ -29,6 +29,8 @@ keymap.set("n", "<leader>tq", "<cmd>tabclose<CR>", { desc = "Close current tab" 
 keymap.set("n", "<leader>tl", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
 keymap.set("n", "<leader>th", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>tp", "g<Tab>")
+keymap.set("n", "<leader>tk", "<cmd>tabm +1<CR>", { desc = "Move tab right" })
+keymap.set("n", "<leader>tj", "<cmd>tabm -1<CR>", { desc = "Move tab left" })
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
 -- keymap.set("n", "<leader>pv", vim.cmd.Ex)
